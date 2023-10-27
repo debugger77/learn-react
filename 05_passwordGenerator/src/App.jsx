@@ -10,8 +10,8 @@ function App() {
   //useRef hook
   const passwordRef = useRef(null);
 
-  const passwordGenerator = useCallback(() => {
-    let pass = ""
+  const passwordGenerator = useCallback(() => { // useCallback returns a memoized callback
+    let pass = ""                               // function i.e. it need not be recalculated.
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     if (numberAllowed) str += "0123456789"
     if (charAllowed) str += "!@#$%^&*-_+=[]{}~`"
